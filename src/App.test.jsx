@@ -1,3 +1,5 @@
+/* global it, document */
+/* eslint-disable prefer-arrow-callback, func-names, no-unused-expressions */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
