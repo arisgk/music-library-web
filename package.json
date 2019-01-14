@@ -8,7 +8,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.{js,jsx}",
-    "prettier": "prettier --list-different './src/**/*.{js,jsx}'"
+    "prettier": "prettier --list-different './src/**/*.{js,jsx}'",
+    "deploy": "npm run build && ./deploy.sh"
   },
   "lint-staged": {
     "src/**/*.js": [
