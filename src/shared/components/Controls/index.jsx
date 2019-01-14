@@ -77,25 +77,23 @@ class Controls extends Component {
     };
   }
 
-  componentDidMount() {
-    const { onNextClick, song, songs } = this.props;
-    this.audio.current.addEventListener('ended', () =>
-      onNextClick(song.id, songs),
-    );
-  }
-
   componentDidUpdate(prevProps) {
-    const { playing, song } = this.props;
+    const { playing, song, songs, onNextClick } = this.props;
     if (
       (playing !== prevProps.playing || song.id !== prevProps.song.id) &&
       playing === true
     ) {
       this.audio.current.play();
+
       this.audio.current.addEventListener('timeupdate', e => {
         this.setState(prevState => ({
           ...prevState,
           currentTime: e.target.currentTime,
         }));
+      });
+
+      this.audio.current.addEventListener('ended', () => {
+        onNextClick(song.id, songs);
       });
     }
 

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { denormalize } from 'normalizr';
 import songSchema from 'shared/redux/schemas/song';
-import { fetchSongs, playSong } from 'shared/redux/actions/songs';
+import { fetchSongs } from 'shared/redux/actions/songs';
 import Home from 'home/components/Home';
 
 const mapStateToProps = state => {
@@ -18,7 +18,6 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  onSelectRow: id => dispatch(playSong(id)),
   onFetchSongs: () => dispatch(fetchSongs()),
 });
 

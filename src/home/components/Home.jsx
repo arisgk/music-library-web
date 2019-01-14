@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Playlist from 'shared/components/Playlist';
+import Playlist from 'shared/containers/Playlist';
 import CenteredProgress from 'shared/components/CenteredProgress';
 import propTypes from 'shared/propTypes';
 

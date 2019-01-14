@@ -12,6 +12,12 @@ export default function reducer(state = initialState, action) {
         ...state,
         song: action.data.result.songs[0],
       };
+    case types.PLAY_SONG:
+      return {
+        ...state,
+        song: action.id,
+        playing: true,
+      };
     case types.TOGGLE_PLAY:
       return {
         ...state,
