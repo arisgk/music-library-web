@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Controls renders correctly 1`] = `
+<div>
+  <audio
+    src="https://some-host.com/animals"
+  />
+  <div
+    className="Controls-controlsContainer-1"
+  >
+    <div
+      className="Controls-songSequenceControlsContainer-2"
+    >
+      <WithStyles(IconButton)
+        aria-label="Previous"
+        disabled={true}
+        onClick={[Function]}
+      >
+        <pure(SkipPreviousIcon) />
+      </WithStyles(IconButton)>
+      <WithStyles(IconButton)
+        aria-label="Play/Pause"
+        onClick={[Function]}
+      >
+        <pure(PlayCircleOutlineIcon)
+          fontSize="large"
+        />
+      </WithStyles(IconButton)>
+      <WithStyles(IconButton)
+        aria-label="Next"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <pure(SkipNextIcon) />
+      </WithStyles(IconButton)>
+    </div>
+    <div
+      className="Controls-progressContainer-3"
+    >
+      <WithStyles(LinearProgress)
+        classes={
+          Object {
+            "dashed": undefined,
+            "root": "Controls-linearProgressRoot-4",
+          }
+        }
+        value={0}
+        variant="determinate"
+      />
+    </div>
+    <div
+      className="Controls-metaContainer-5"
+    >
+      <img
+        className="Controls-cover-9"
+        role="presentation"
+        src="https://some-host.com/muse-the-2nd-law.jpg"
+      />
+      <div
+        className="Controls-infoContainer-6"
+      >
+        <h4
+          className="Controls-songTitle-7"
+        >
+          Animals
+        </h4>
+        <h5
+          className="Controls-songArtist-8"
+        >
+          Muse
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Controls renders correctly 2`] = `
+<div>
+  <audio
+    src="https://some-host.com/animals"
+  />
+  <div
+    className="Controls-controlsContainer-1"
+  >
+    <div
+      className="Controls-songSequenceControlsContainer-2"
+    >
+      <WithStyles(IconButton)
+        aria-label="Previous"
+        disabled={true}
+        onClick={[Function]}
+      >
+        <pure(SkipPreviousIcon) />
+      </WithStyles(IconButton)>
+      <WithStyles(IconButton)
+        aria-label="Play/Pause"
+        onClick={[Function]}
+      >
+        <pure(PauseCircleOutlineIcon)
+          fontSize="large"
+        />
+      </WithStyles(IconButton)>
+      <WithStyles(IconButton)
+        aria-label="Next"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <pure(SkipNextIcon) />
+      </WithStyles(IconButton)>
+    </div>
+    <div
+      className="Controls-progressContainer-3"
+    >
+      <WithStyles(LinearProgress)
+        classes={
+          Object {
+            "dashed": undefined,
+            "root": "Controls-linearProgressRoot-4",
+          }
+        }
+        value={0}
+        variant="determinate"
+      />
+    </div>
+    <div
+      className="Controls-metaContainer-5"
+    >
+      <img
+        className="Controls-cover-9"
+        role="presentation"
+        src="https://some-host.com/muse-the-2nd-law.jpg"
+      />
+      <div
+        className="Controls-infoContainer-6"
+      >
+        <h4
+          className="Controls-songTitle-7"
+        >
+          Animals
+        </h4>
+        <h5
+          className="Controls-songArtist-8"
+        >
+          Muse
+        </h5>
+      </div>
+    </div>
+  </div>
+</div>
+`;

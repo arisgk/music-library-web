@@ -67,7 +67,7 @@ const styles = {
   },
 };
 
-class Controls extends Component {
+export class Controls extends Component {
   constructor(props) {
     super(props);
     this.audio = React.createRef();

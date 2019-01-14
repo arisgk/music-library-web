@@ -21,14 +21,14 @@ const styles = () => ({
     top: 0,
   },
   currentSongRow: {
-    backgroundColor: '#eaeaea',
+    backgroundColor: '#F3E5F5',
   },
   iconButtonRoot: {
     padding: 0,
   },
 });
 
-class Playlist extends Component {
+export class Playlist extends Component {
   constructor(props) {
     super(props);
 
@@ -67,10 +67,7 @@ class Playlist extends Component {
               onMouseEnter={() => this.handleMouseEnter(song.id)}
               onMouseLeave={() => this.handleMouseLeave()}
               classes={{
-                root:
-                  currentSong === song.id && !rowHover
-                    ? classes.currentSongRow
-                    : null,
+                root: currentSong === song.id ? classes.currentSongRow : null,
               }}
             >
               {rowHover === song.id ? (
@@ -80,7 +77,7 @@ class Playlist extends Component {
                     onClick={() => onRowButtonClick(song.id)}
                     classes={{ root: classes.iconButtonRoot }}
                   >
-                    <PlayIcon fontSize="large" />
+                    <PlayIcon fontSize="medium" />
                   </IconButton>
                 </TableCell>
               ) : (
@@ -100,7 +97,7 @@ class Playlist extends Component {
 Playlist.propTypes = {
   songs: PropTypes.arrayOf(propTypes.song),
   classes: PropTypes.object.isRequired,
-  onRowButtonClick: PropTypes.object.isRequired,
+  onRowButtonClick: PropTypes.func.isRequired,
   currentSong: PropTypes.number,
 };
 
