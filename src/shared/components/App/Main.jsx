@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Home from 'home/containers/Home';
+import NoteIcon from '@material-ui/icons/MusicNote';
 import Controls from 'shared/containers/Controls';
 
 const styles = {
@@ -10,6 +11,12 @@ const styles = {
     maxHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
+  },
+  logoContainer: {
+    height: 64,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   homeContainer: {
     flex: 'auto',
@@ -22,6 +29,9 @@ const styles = {
 
 const Main = ({ classes }) => (
   <div className={classes.container}>
+    <div className={classes.logoContainer}>
+      <NoteIcon fontSize="large" color="primary" />
+    </div>
     <div className={classes.homeContainer}>
       <Home />
     </div>
