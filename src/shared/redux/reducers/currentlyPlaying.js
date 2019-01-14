@@ -1,6 +1,6 @@
 import * as types from 'shared/redux/actions/types';
 
-const initialState = {
+export const initialState = {
   song: null,
   playing: false,
 };
