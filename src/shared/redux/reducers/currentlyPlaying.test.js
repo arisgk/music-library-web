@@ -11,6 +11,7 @@ describe('Songs reducer', () => {
     const state = {
       song: null,
       playing: false,
+      hasPlayedSomething: false,
     };
 
     const action = {
@@ -58,6 +59,7 @@ describe('Songs reducer', () => {
     const newState = {
       song: 1,
       playing: false,
+      hasPlayedSomething: false,
     };
 
     expect(reducer(state, action)).toEqual(newState);
@@ -67,6 +69,7 @@ describe('Songs reducer', () => {
     const state = {
       song: 1,
       playing: true,
+      hasPlayedSomething: true,
     };
 
     const action = {
@@ -77,6 +80,7 @@ describe('Songs reducer', () => {
     const newState = {
       song: 3,
       playing: true,
+      hasPlayedSomething: true,
     };
 
     expect(reducer(state, action)).toEqual(newState);
@@ -86,6 +90,7 @@ describe('Songs reducer', () => {
     const state = {
       song: 1,
       playing: false,
+      hasPlayedSomething: true,
     };
 
     const action = {
@@ -95,6 +100,7 @@ describe('Songs reducer', () => {
     const newState = {
       song: 1,
       playing: true,
+      hasPlayedSomething: true,
     };
 
     expect(reducer(state, action)).toEqual(newState);
@@ -104,6 +110,7 @@ describe('Songs reducer', () => {
     const state = {
       song: 3,
       playing: true,
+      hasPlayedSomething: true,
     };
 
     const action = {
@@ -115,6 +122,7 @@ describe('Songs reducer', () => {
     const newState = {
       song: 2,
       playing: true,
+      hasPlayedSomething: true,
     };
 
     expect(reducer(state, action)).toEqual(newState);
@@ -124,6 +132,7 @@ describe('Songs reducer', () => {
     const state = {
       song: 2,
       playing: true,
+      hasPlayedSomething: true,
     };
 
     const action = {
@@ -135,6 +144,7 @@ describe('Songs reducer', () => {
     const newState = {
       song: 3,
       playing: true,
+      hasPlayedSomething: true,
     };
 
     expect(reducer(state, action)).toEqual(newState);

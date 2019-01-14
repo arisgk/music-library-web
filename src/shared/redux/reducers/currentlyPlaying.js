@@ -3,6 +3,7 @@ import * as types from 'shared/redux/actions/types';
 export const initialState = {
   song: null,
   playing: false,
+  hasPlayedSomething: false, // useful for notifications UX
 };
 
 export default function reducer(state = initialState, action) {
@@ -15,12 +16,14 @@ export default function reducer(state = initialState, action) {
     case types.PLAY_SONG:
       return {
         ...state,
+        hasPlayedSomething: true,
         song: action.id,
         playing: true,
       };
     case types.TOGGLE_PLAY:
       return {
         ...state,
+        hasPlayedSomething: true,
         playing: !state.playing,
       };
     case types.PLAY_PREVIOUS: {

@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Home from 'home/containers/Home';
 import NoteIcon from '@material-ui/icons/MusicNote';
 import Controls from 'shared/containers/Controls';
+import Notifications from 'shared/containers/Notifications';
 
 const styles = {
   container: {
@@ -34,6 +35,7 @@ const Main = ({ classes }) => (
     </div>
     <div className={classes.homeContainer}>
       <Home />
+      <Notifications />
     </div>
     <div className={classes.controlsContainer}>
       <Controls />

@@ -6,3 +6,6 @@ export const TOGGLE_PLAY = 'TOGGLE_PLAY';
 export const PLAY_SONG = 'PLAY_SONG';
 export const PLAY_PREVIOUS = 'PLAY_PREVIOUS';
 export const PLAY_NEXT = 'PLAY_NEXT';
+
+export const SONG_SUGGESTION = 'SONG_SUGGESTION';
+export const SONG_SUGGESTION_CLOSED = 'SONG_SUGGESTION_CLOSED';

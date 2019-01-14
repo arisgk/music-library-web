@@ -7,7 +7,7 @@ describe('Controls actions', () => {
     const expected = {
       type: types.TOGGLE_PLAY,
     };
-    expect(actions.togglePlay()).toEqual(expected);
+    expect(actions.toggle()).toEqual(expected);
   });
 
   it('should create an action to play the previous song', () => {
@@ -18,7 +18,7 @@ describe('Controls actions', () => {
       current,
       songs,
     };
-    expect(actions.playPrevious(current, songs)).toEqual(expected);
+    expect(actions.previous(current, songs)).toEqual(expected);
   });
 
   it('should create an action to play the next song', () => {
@@ -29,6 +29,6 @@ describe('Controls actions', () => {
       current,
       songs,
     };
-    expect(actions.playNext(current, songs)).toEqual(expected);
+    expect(actions.next(current, songs)).toEqual(expected);
   });
 });

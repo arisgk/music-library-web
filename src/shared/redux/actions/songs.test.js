@@ -5,7 +5,9 @@ import fetchMock from 'fetch-mock';
 import * as actions from './songs';
 import * as types from './types';
 
-const middlewares = [thunk];
+const api = process.env.REACT_APP_API_URL;
+
+const middlewares = [thunk.withExtraArgument({ api })];
 const mockStore = configureMockStore(middlewares);
 
 describe('Songs actions', () => {
@@ -15,7 +17,7 @@ describe('Songs actions', () => {
       type: types.PLAY_SONG,
       id,
     };
-    expect(actions.playSong(id)).toEqual(expected);
+    expect(actions.play(id)).toEqual(expected);
   });
 
   describe('Async actions', () => {
@@ -54,7 +56,7 @@ describe('Songs actions', () => {
     });
 
     it('creates the required actions for successful songs fetching', async () => {
-      fetchMock.getOnce(`${process.env.REACT_APP_API_URL}/songs`, {
+      fetchMock.getOnce(`${api}/songs`, {
         body: { songs },
         headers: { 'content-type': 'application/json' },
       });

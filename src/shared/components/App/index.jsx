@@ -4,6 +4,7 @@ import {
   createGenerateClassName,
   jssPreset,
 } from '@material-ui/core/styles';
+import io from 'socket.io-client';
 import { Provider } from 'react-redux';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import JssProvider from 'react-jss/lib/JssProvider';
@@ -17,7 +18,10 @@ const theme = setupTheme();
 const generateClassName = createGenerateClassName();
 const jss = create(jssPreset());
 
-const store = configureStore();
+const api = process.env.REACT_APP_API_URL;
+const socket = io(process.env.REACT_APP_SOCKET_SERVER_URL);
+
+const store = configureStore(api, socket);
 
 const App = () => (
   <Provider store={store}>
