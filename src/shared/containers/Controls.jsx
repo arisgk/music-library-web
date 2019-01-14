@@ -4,6 +4,7 @@ import {
   playPrevious,
   playNext,
 } from 'shared/redux/actions/controls';
+import { songsResultSelector } from 'shared/redux/selectors/songs';
 import Controls from 'shared/components/Controls';
 
 const mapStateToProps = state => ({
@@ -13,7 +14,7 @@ const mapStateToProps = state => ({
   isLastSong:
     state.currentlyPlaying.song ===
     state.songs.result[state.songs.result.length - 1],
-  songs: state.songs.result,
+  songs: songsResultSelector(state),
 });
 
 const mapDispatchToProps = dispatch => ({

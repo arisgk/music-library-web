@@ -1,15 +1,10 @@
 import { connect } from 'react-redux';
-import { denormalize } from 'normalizr';
-import songSchema from 'shared/redux/schemas/song';
 import { fetchSongs } from 'shared/redux/actions/songs';
+import { getDenormalizedSongs } from 'shared/redux/selectors/songs';
 import Home from 'home/components/Home';
 
 const mapStateToProps = state => {
-  const data = denormalize(
-    { songs: state.songs.result },
-    { songs: [songSchema] },
-    { songs: state.songs.entities },
-  ).songs;
+  const data = getDenormalizedSongs(state);
 
   return {
     songs: data,
