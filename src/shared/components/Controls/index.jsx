@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/media-has-caption */
+/* eslint-disable jsx-a11y/media-has-caption, jsx-a11y/alt-text */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -19,6 +19,7 @@ const styles = {
     flexDirection: 'column',
     backgroundColor: '#F5F5F5',
     boxShadow: '0 0 1px rgba(34, 25, 25, 0.4)',
+    position: 'relative',
   },
   songSequenceControlsContainer: {
     display: 'flex',
@@ -31,6 +32,38 @@ const styles = {
   },
   linearProgressRoot: {
     width: '42%',
+  },
+  metaContainer: {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 24,
+    height: 120,
+    width: 240,
+    display: 'flex',
+    alignItems: 'center',
+  },
+  infoContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
+  songTitle: {
+    marginBottom: 8,
+    marginTop: 0,
+    fontWeight: 400,
+    color: 'rgba(0,0,0,0.87)',
+  },
+  songArtist: {
+    marginBottom: 0,
+    marginTop: 0,
+    fontWeight: 400,
+    color: 'rgba(0,0,0,0.54)',
+  },
+  cover: {
+    width: 64,
+    height: 64,
+    marginRight: 8,
   },
 };
 
@@ -125,6 +158,17 @@ class Controls extends Component {
               variant="determinate"
               value={(currentTime / song.duration) * 100}
             />
+          </div>
+          <div className={classes.metaContainer}>
+            <img
+              src={song.albumCover}
+              role="presentation"
+              className={classes.cover}
+            />
+            <div className={classes.infoContainer}>
+              <h4 className={classes.songTitle}>{song.title}</h4>
+              <h5 className={classes.songArtist}>{song.artist}</h5>
+            </div>
           </div>
         </div>
       </div>

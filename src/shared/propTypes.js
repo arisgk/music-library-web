@@ -6,6 +6,7 @@ const song = PropTypes.shape({
   title: PropTypes.string,
   artist: PropTypes.string,
   album: PropTypes.string,
+  albumCover: PropTypes.string,
   duration: PropTypes.number,
 });
 
