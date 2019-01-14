@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/media-has-caption, jsx-a11y/alt-text */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import MediaQuery from 'react-responsive';
 import { withStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import PreviousIcon from '@material-ui/icons/SkipPrevious';
@@ -157,17 +158,19 @@ export class Controls extends Component {
               value={(currentTime / song.duration) * 100}
             />
           </div>
-          <div className={classes.metaContainer}>
-            <img
-              src={song.albumCover}
-              role="presentation"
-              className={classes.cover}
-            />
-            <div className={classes.infoContainer}>
-              <h4 className={classes.songTitle}>{song.title}</h4>
-              <h5 className={classes.songArtist}>{song.artist}</h5>
+          <MediaQuery query="(min-device-width: 768px)">
+            <div className={classes.metaContainer}>
+              <img
+                src={song.albumCover}
+                role="presentation"
+                className={classes.cover}
+              />
+              <div className={classes.infoContainer}>
+                <h4 className={classes.songTitle}>{song.title}</h4>
+                <h5 className={classes.songArtist}>{song.artist}</h5>
+              </div>
             </div>
-          </div>
+          </MediaQuery>
         </div>
       </div>
     );

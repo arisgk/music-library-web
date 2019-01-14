@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import MediaQuery from 'react-responsive';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -53,10 +54,18 @@ export class Playlist extends Component {
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell className={classes.head} width={64} padding="checkbox" />
+            <MediaQuery query="(min-device-width: 768px)">
+              <TableCell
+                className={classes.head}
+                width={64}
+                padding="checkbox"
+              />
+            </MediaQuery>
             <TableCell className={classes.head}>{title}</TableCell>
-            <TableCell className={classes.head}>{artist}</TableCell>
-            <TableCell className={classes.head}>{album}</TableCell>
+            <MediaQuery query="(min-device-width: 768px)">
+              <TableCell className={classes.head}>{artist}</TableCell>
+              <TableCell className={classes.head}>{album}</TableCell>
+            </MediaQuery>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -70,22 +79,27 @@ export class Playlist extends Component {
                 root: currentSong === song.id ? classes.currentSongRow : null,
               }}
             >
-              {rowHover === song.id ? (
-                <TableCell width={64} padding="checkbox" align="center">
-                  <IconButton
-                    aria-label="Play Song"
-                    onClick={() => onRowButtonClick(song.id)}
-                    classes={{ root: classes.iconButtonRoot }}
-                  >
-                    <PlayIcon fontSize="medium" />
-                  </IconButton>
-                </TableCell>
-              ) : (
-                <TableCell width={64} />
-              )}
+              <MediaQuery query="(min-device-width: 768px)">
+                {rowHover === song.id ? (
+                  <TableCell width={64} padding="checkbox" align="center">
+                    <IconButton
+                      aria-label="Play Song"
+                      onClick={() => onRowButtonClick(song.id)}
+                      classes={{ root: classes.iconButtonRoot }}
+                    >
+                      <PlayIcon fontSize="large" />
+                    </IconButton>
+                  </TableCell>
+                ) : (
+                  <TableCell width={64} />
+                )}
+              </MediaQuery>
+
               <TableCell>{song.title}</TableCell>
-              <TableCell>{song.artist}</TableCell>
-              <TableCell>{song.album}</TableCell>
+              <MediaQuery query="(min-device-width: 768px)">
+                <TableCell>{song.artist}</TableCell>
+                <TableCell>{song.album}</TableCell>
+              </MediaQuery>
             </TableRow>
           ))}
         </TableBody>

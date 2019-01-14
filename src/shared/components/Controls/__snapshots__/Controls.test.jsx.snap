@@ -48,29 +48,34 @@ exports[`Controls renders correctly 1`] = `
         variant="determinate"
       />
     </div>
-    <div
-      className="Controls-metaContainer-5"
+    <MediaQuery
+      query="(min-device-width: 768px)"
+      values={Object {}}
     >
-      <img
-        className="Controls-cover-9"
-        role="presentation"
-        src="https://some-host.com/muse-the-2nd-law.jpg"
-      />
       <div
-        className="Controls-infoContainer-6"
+        className="Controls-metaContainer-5"
       >
-        <h4
-          className="Controls-songTitle-7"
+        <img
+          className="Controls-cover-9"
+          role="presentation"
+          src="https://some-host.com/muse-the-2nd-law.jpg"
+        />
+        <div
+          className="Controls-infoContainer-6"
         >
-          Animals
-        </h4>
-        <h5
-          className="Controls-songArtist-8"
-        >
-          Muse
-        </h5>
+          <h4
+            className="Controls-songTitle-7"
+          >
+            Animals
+          </h4>
+          <h5
+            className="Controls-songArtist-8"
+          >
+            Muse
+          </h5>
+        </div>
       </div>
-    </div>
+    </MediaQuery>
   </div>
 </div>
 `;
@@ -123,29 +128,34 @@ exports[`Controls renders correctly 2`] = `
         variant="determinate"
       />
     </div>
-    <div
-      className="Controls-metaContainer-5"
+    <MediaQuery
+      query="(min-device-width: 768px)"
+      values={Object {}}
     >
-      <img
-        className="Controls-cover-9"
-        role="presentation"
-        src="https://some-host.com/muse-the-2nd-law.jpg"
-      />
       <div
-        className="Controls-infoContainer-6"
+        className="Controls-metaContainer-5"
       >
-        <h4
-          className="Controls-songTitle-7"
+        <img
+          className="Controls-cover-9"
+          role="presentation"
+          src="https://some-host.com/muse-the-2nd-law.jpg"
+        />
+        <div
+          className="Controls-infoContainer-6"
         >
-          Animals
-        </h4>
-        <h5
-          className="Controls-songArtist-8"
-        >
-          Muse
-        </h5>
+          <h4
+            className="Controls-songTitle-7"
+          >
+            Animals
+          </h4>
+          <h5
+            className="Controls-songArtist-8"
+          >
+            Muse
+          </h5>
+        </div>
       </div>
-    </div>
+    </MediaQuery>
   </div>
 </div>
 `;
