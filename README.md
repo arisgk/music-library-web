@@ -1,4 +1,32 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Music Library Web Application
+
+Playground project implementing a music library web app. Built with [ReactJS](https://reactjs.org/) and [Redux](https://redux.js.org/). [Material-UI](https://material-ui.com/) components are used to implement Google's [Material Design](https://material.io/design/).
+
+Check out a [deployed version of the app](http://damta7pbm7dhu.cloudfront.net/). It is deployed using [Amazon S3](https://aws.amazon.com/s3/) and [Amazon CloudFront](https://aws.amazon.com/cloudfront/).
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), so its docs could be helpful for development.
+
+## Features
+
+- Simple playlist and controls interface
+- Real-time notifications for what other people are listening (using [WebSockets](https://en.wikipedia.org/wiki/WebSocket))
+
+## Possible Extensions
+
+- Volume control
+- Interactive song time progress bar
+- Artists & albums interfaces
+- User profile & preferences
+
+# Quick Start
+
+## Prerequisites
+
+Define an .env file at the root directory of the project containing all the environment variables needed. The following environment variables are required:
+
+- `REACT_APP_API_URL` - The backend RESTful API URL
+- `REACT_APP_SOCKET_SERVER_URL` - The backend Websockets server URL.
+- `NODE_PATH=src/` to resolve relative paths to `src/` in your code.
 
 ## Available Scripts
 
@@ -17,6 +45,8 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+[Jest](https://jestjs.io/) is used for test running and assertions. [Enzyme](https://airbnb.io/enzyme/index.html) is used for Jest snapshots shallow rendering.
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.<br>
@@ -27,42 +57,6 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+# Code Style
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[Prettier](https://prettier.io/) and [ESLint](https://eslint.org/) with [Airbnb style guide](https://github.com/airbnb/javascript).
