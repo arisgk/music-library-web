@@ -13,7 +13,7 @@ const styles = {
   },
 };
 
-class Home extends Component {
+export class Home extends Component {
   componentDidMount() {
     const { onFetchSongs } = this.props;
     onFetchSongs();
@@ -22,18 +22,18 @@ class Home extends Component {
   render() {
     const { loading, songs, error, classes } = this.props;
 
-    if (!loading && error) {
-      return (
-        <div className={classes.container}>
-          <ErrorView message={error} />
-        </div>
-      );
-    }
-
     if (loading) {
       return (
         <div className={classes.container}>
           <CenteredProgress />
+        </div>
+      );
+    }
+
+    if (!loading && error) {
+      return (
+        <div className={classes.container}>
+          <ErrorView message={error} />
         </div>
       );
     }

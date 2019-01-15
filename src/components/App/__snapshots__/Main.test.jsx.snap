@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders correctly 1`] = `
+<div
+  className="Main-container-1"
+>
+  <div
+    className="Main-logoContainer-2"
+  >
+    <pure(MusicNoteIcon)
+      color="primary"
+      fontSize="large"
+    />
+  </div>
+  <div
+    className="Main-homeContainer-3"
+  >
+    <Connect(WithStyles(Home)) />
+  </div>
+  <div
+    className="Main-controlsContainer-4"
+  >
+    <Connect(WithStyles(Controls)) />
+  </div>
+  <Connect(WithStyles(Notifications)) />
+</div>
+`;

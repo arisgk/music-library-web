@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders message and icon 1`] = `
+<div
+  className="ErrorView-container-1"
+>
+  <div
+    className="ErrorView-iconContainer-2"
+  >
+    <pure(ErrorIcon)
+      classes={
+        Object {
+          "root": "ErrorView-icon-3",
+        }
+      }
+    />
+  </div>
+  <h3
+    className="ErrorView-message-4"
+  >
+    Something went wrong
+  </h3>
+</div>
+`;
+
+exports[`Home renders message, icon and button 1`] = `
+<div
+  className="ErrorView-container-1"
+>
+  <div
+    className="ErrorView-iconContainer-2"
+  >
+    <pure(ErrorIcon)
+      classes={
+        Object {
+          "root": "ErrorView-icon-3",
+        }
+      }
+    />
+  </div>
+  <h3
+    className="ErrorView-message-4"
+  >
+    Something went wrong
+  </h3>
+  <WithStyles(Button)
+    className="ErrorView-button-5"
+    color="primary"
+    onClick={[Function]}
+    variant="contained"
+  >
+    Refresh
+  </WithStyles(Button)>
+</div>
+`;

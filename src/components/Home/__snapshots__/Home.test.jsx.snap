@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home displays an error view when an error is encountered 1`] = `
+<div
+  className="Home-container-1"
+>
+  <WithStyles(ErrorView)
+    message="something went wrong"
+  />
+</div>
+`;
+
+exports[`Home displays progress indicator properly 1`] = `
+<div
+  className="Home-container-1"
+>
+  <WithStyles(Progress) />
+</div>
+`;
+
+exports[`Home renders correctly 1`] = `
+<div
+  className="Home-container-1"
+>
+  <Connect(WithStyles(Playlist))
+    songs={
+      Array [
+        Object {
+          "album": "The 2nd Law",
+          "albumCover": "https://some-host.com/muse-the-2nd-law.jpg",
+          "artist": "Muse",
+          "duration": 263,
+          "id": 1,
+          "title": "Animals",
+          "url": "https://some-host.com/animals",
+        },
+        Object {
+          "album": "The Division Bell",
+          "albumCover": "https://some-host.com/pink-floyd-the-division-bell.jpg",
+          "artist": "Pink Floyd",
+          "duration": 386,
+          "id": 2,
+          "title": "Coming Back to Life",
+          "url": "https://some-host.com/coming-back-to-life",
+        },
+        Object {
+          "album": "Metallica",
+          "albumCover": "https://some-host.com/metallica-ride-the-lightning.jpeg",
+          "artist": "Ride the Lightning",
+          "duration": 420,
+          "id": 3,
+          "title": "Fade to Black",
+          "url": "https://some-host.com/fade-to-black",
+        },
+      ]
+    }
+  />
+</div>
+`;

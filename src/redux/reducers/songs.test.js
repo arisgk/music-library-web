@@ -12,6 +12,7 @@ describe('Songs reducer', () => {
       loading: false,
       entities: {},
       result: [],
+      error: null,
     };
 
     const action = {
@@ -22,6 +23,7 @@ describe('Songs reducer', () => {
       loading: true,
       entities: {},
       result: [],
+      error: null,
     };
 
     expect(reducer(state, action)).toEqual(newState);
@@ -32,6 +34,7 @@ describe('Songs reducer', () => {
       loading: true,
       entities: {},
       result: [],
+      error: null,
     };
 
     const action = {
@@ -80,6 +83,32 @@ describe('Songs reducer', () => {
       loading: false,
       entities: action.data.entities.songs,
       result: action.data.result.songs,
+      error: null,
+    };
+
+    expect(reducer(state, action)).toEqual(newState);
+  });
+
+  it('should handle fetch songs failure', () => {
+    const state = {
+      loading: true,
+      entities: {},
+      result: [],
+      error: null,
+    };
+
+    const message = 'Something went wrong';
+
+    const action = {
+      type: actions.FETCH_SONGS_FAILURE,
+      errorMessage: message,
+    };
+
+    const newState = {
+      loading: false,
+      entities: {},
+      result: [],
+      error: message,
     };
 
     expect(reducer(state, action)).toEqual(newState);

@@ -31,7 +31,7 @@ const styles = {
   },
 };
 
-const Main = ({ classes }) => (
+export const Main = ({ classes }) => (
   <div className={classes.container}>
     <div className={classes.logoContainer}>
       <NoteIcon fontSize="large" color="primary" />
