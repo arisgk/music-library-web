@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
 import { denormalize } from 'normalizr';
-import songSchema from 'shared/redux/schemas/song';
+import songSchema from 'redux/schemas/song';
 
 const songsEntitiesSelector = state => state.songs.entities;
 export const songsResultSelector = state => state.songs.result;

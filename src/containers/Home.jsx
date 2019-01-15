@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import { fetchSongs } from 'shared/redux/actions/songs';
-import { getDenormalizedSongs } from 'shared/redux/selectors/songs';
-import Home from 'home/components/Home';
+import { fetchSongs } from 'redux/actions/songs';
+import { getDenormalizedSongs } from 'redux/selectors/songs';
+import Home from 'components/Home';
 
 const mapStateToProps = state => {
   const data = getDenormalizedSongs(state);

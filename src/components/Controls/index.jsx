@@ -9,7 +9,7 @@ import PlayIcon from '@material-ui/icons/PlayCircleOutline';
 import PauseIcon from '@material-ui/icons/PauseCircleOutline';
 import NextIcon from '@material-ui/icons/SkipNext';
 import LinearProgress from '@material-ui/core/LinearProgress';
-import propTypes from 'shared/propTypes';
+import propTypes from 'propTypes';
 
 const styles = {
   controlsContainer: {

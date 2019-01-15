@@ -1,11 +1,7 @@
 import { connect } from 'react-redux';
-import {
-  togglePlay,
-  playPrevious,
-  playNext,
-} from 'shared/redux/actions/controls';
-import { songsResultSelector } from 'shared/redux/selectors/songs';
-import Controls from 'shared/components/Controls';
+import { togglePlay, playPrevious, playNext } from 'redux/actions/controls';
+import { songsResultSelector } from 'redux/selectors/songs';
+import Controls from 'components/Controls';
 
 const mapStateToProps = state => ({
   song: state.songs.entities[state.currentlyPlaying.song],

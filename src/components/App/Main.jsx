@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Home from 'home/containers/Home';
+import Home from 'containers/Home';
 import NoteIcon from '@material-ui/icons/MusicNote';
-import Controls from 'shared/containers/Controls';
-import Notifications from 'shared/containers/Notifications';
+import Controls from 'containers/Controls';
+import Notifications from 'containers/Notifications';
 
 const styles = {
   container: {

@@ -1,4 +1,4 @@
-import * as types from 'shared/redux/actions/types';
+import * as types from 'redux/actions/types';
 
 export const initialState = {
   song: null,

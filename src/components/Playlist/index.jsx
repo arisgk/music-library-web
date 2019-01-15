@@ -9,7 +9,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import IconButton from '@material-ui/core/IconButton';
 import PlayIcon from '@material-ui/icons/PlayCircleOutline';
-import propTypes from 'shared/propTypes';
+import propTypes from 'propTypes';
 
 const title = 'Title';
 const artist = 'Artist';

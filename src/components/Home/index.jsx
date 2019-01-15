@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Playlist from 'shared/containers/Playlist';
-import CenteredProgress from 'shared/components/CenteredProgress';
-import propTypes from 'shared/propTypes';
+import Playlist from 'containers/Playlist';
+import CenteredProgress from 'components/CenteredProgress';
+import propTypes from 'propTypes';
 
 class Home extends Component {
   componentDidMount() {

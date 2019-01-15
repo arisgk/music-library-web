@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import JssProvider from 'react-jss/lib/JssProvider';
 import { create } from 'jss';
-import configureStore from 'shared/redux/store/configure';
+import configureStore from 'redux/store/configure';
 import setupTheme from './theme';
 import Main from './Main';
 

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { playSong } from 'shared/redux/actions/songs';
-import Notifications from 'shared/components/Notifications';
+import { playSong } from 'redux/actions/songs';
+import Notifications from 'components/Notifications';
 import { closeSongSuggestion } from '../redux/actions/notifications';
 
 const mapStateToProps = state => ({
