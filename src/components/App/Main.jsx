@@ -12,6 +12,7 @@ const styles = {
     maxHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
+    fontFamily: 'Roboto, sans-serif',
   },
   logoContainer: {
     height: 64,
@@ -22,6 +23,8 @@ const styles = {
   homeContainer: {
     flex: 'auto',
     overflow: 'auto',
+    display: 'flex',
+    flexDirection: 'column',
   },
   controlsContainer: {
     flex: 'initial',
@@ -35,11 +38,11 @@ const Main = ({ classes }) => (
     </div>
     <div className={classes.homeContainer}>
       <Home />
-      <Notifications />
     </div>
     <div className={classes.controlsContainer}>
       <Controls />
     </div>
+    <Notifications />
   </div>
 );
 

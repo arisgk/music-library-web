@@ -4,6 +4,7 @@ export const initialState = {
   loading: false,
   entities: {},
   result: [],
+  error: null,
 };
 
 export default function reducer(state = initialState, action) {
@@ -16,6 +17,12 @@ export default function reducer(state = initialState, action) {
         loading: false,
         entities: action.data.entities.songs,
         result: action.data.result.songs,
+      };
+    case types.FETCH_SONGS_FAILURE:
+      return {
+        ...state,
+        loading: false,
+        error: action.errorMessage,
       };
     default:
       return state;

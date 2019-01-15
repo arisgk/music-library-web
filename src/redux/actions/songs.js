@@ -14,9 +14,9 @@ const requestSongsSuccess = data => ({
   data,
 });
 
-const requestSongsFailure = error => ({
+const requestSongsFailure = message => ({
   type: types.FETCH_SONGS_FAILURE,
-  error,
+  errorMessage: message,
 });
 
 export const fetchSongs = () => async (dispatch, _, { api }) => {
@@ -33,7 +33,8 @@ export const fetchSongs = () => async (dispatch, _, { api }) => {
 
     throw Error(response.statusText);
   } catch (err) {
-    return dispatch(requestSongsFailure(err));
+    const message = 'Something went wrong in fetching songs. Please try again.';
+    return dispatch(requestSongsFailure(message));
   }
 };
 

@@ -1,39 +1,29 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-const styles = theme => ({
+const styles = {
   container: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
+    flex: 'auto',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
   },
-  label: {
-    fontSize: 14,
-    marginTop: theme.spacing.unit * 2,
-  },
-});
+};
 
-const CenteredProgress = ({ classes, label }) => (
+const Progress = ({ classes }) => (
   <div className={classes.container}>
-    <CircularProgress className={classes.container} color="primary" />
-    {label ? <span className={classes.label}>{label}</span> : null}
+    <CircularProgress className={classes.progress} />
   </div>
 );
 
-CenteredProgress.propTypes = {
-  classes: PropTypes.object.isRequired,
-  label: PropTypes.string,
+Progress.propTypes = {
+  classes: PropTypes.object,
 };
 
-CenteredProgress.defaultProps = {
-  label: '',
+Progress.defaultProps = {
+  classes: {},
 };
 
-export default withStyles(styles)(CenteredProgress);
+export default withStyles(styles)(Progress);
