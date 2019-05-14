@@ -2,8 +2,6 @@
 
 Playground project implementing a music library web app. Built with [ReactJS](https://reactjs.org/) and [Redux](https://redux.js.org/). [Material-UI](https://material-ui.com/) components are used to implement Google's [Material Design](https://material.io/design/).
 
-Check out a [deployed version of the app](http://damta7pbm7dhu.cloudfront.net/). It is deployed using [Amazon S3](https://aws.amazon.com/s3/) and [Amazon CloudFront](https://aws.amazon.com/cloudfront/).
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), so its docs could be helpful for development.
 
 ## Features
